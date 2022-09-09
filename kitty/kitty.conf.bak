@@ -1,17 +1,14 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-<<<<<<< HEAD
-=======
 include ./theme.conf
 
->>>>>>> c8c5513 (update .gitignore)
 #: Fonts {{{
 
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-# font_family      monospace
+font_family      monospace
 bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
@@ -24,7 +21,7 @@ bold_font        auto
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
-#:     font_family      Operator Mono Book
+font_family      Operator Mono Book
 #:     bold_font        Operator Mono Medium
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
@@ -982,7 +979,7 @@ cursor_blink_interval 0
 
 #: The foreground and background colors.
 
-background_opacity 0.9
+background_opacity 1
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -2177,12 +2174,9 @@ dynamic_background_opacity yes
 #: }}}
 
 #: }}}
-<<<<<<< HEAD
-=======
 
 
 # BEGIN_KITTY_THEME
-# Dracula
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
->>>>>>> c8c5513 (update .gitignore)
