@@ -1,7 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "gopls",
@@ -9,7 +9,8 @@ local servers = {
   "cssls",
   "sqls",
   "tailwindcss",
-  "svelte"
+  "svelte",
+  "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do
