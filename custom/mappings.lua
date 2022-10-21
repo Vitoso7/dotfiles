@@ -6,6 +6,7 @@ M.mappings = {
   },
   n = {
     ["<leader>z"] = { "<cmd>TroubleToggle<cr>", opts = { silent = true, noremap = true } },
+    ["<leader>1"] = { ":Telescope find_files<cr>", opts = { silent = true, noremap = true } },
   },
 }
 
