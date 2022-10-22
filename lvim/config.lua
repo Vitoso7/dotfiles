@@ -8,13 +8,15 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+vim.opt.relativenumber = true
+
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = false
+lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
 lvim.keys.insert_mode["jk"] = "<ESC>"
-lvim.keys.normal_mode["<leader>q"] = "<cmd>TroubleToggle<cr>"
-lvim.keys.normal_mode["<leader>x"] = "<cmd>bd<cr>"
+lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<cr>"
+lvim.keys.normal_mode["<leader>x"] = ":bd<cr>"
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -169,11 +171,19 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-     {
-       "folke/trouble.nvim",
-       cmd = "TroubleToggle",
-     },
- }
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  --{
+  -- "gorbit99/codewindow.nvim",
+  --   config = function()
+  --     local codewindow = require "codewindow"
+  --     codewindow.setup()
+  --     codewindow.apply_default_keybinds()
+  --   end,
+  -- }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
