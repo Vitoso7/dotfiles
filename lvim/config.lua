@@ -15,8 +15,10 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
 lvim.keys.insert_mode["jk"] = "<ESC>"
-lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<cr>"
-lvim.keys.normal_mode["<leader>x"] = ":bd<cr>"
+lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
+lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
+lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
+lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -24,7 +26,7 @@ lvim.keys.normal_mode["<leader>x"] = ":bd<cr>"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<TAB>"] = ":BufferLineCycleNext<CR>"
 
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
