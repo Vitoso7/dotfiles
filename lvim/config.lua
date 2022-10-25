@@ -19,6 +19,8 @@ lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
 lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
+lvim.keys.normal_mode["<F7>"] = ":ToggleTerm<CR>"
+-- lvim.builtin.terminal["<F7>"] = lvim.keys.normal_mode["<F7>"]
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -79,18 +81,18 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-	"bash",
-	"c",
-	"javascript",
-	"json",
-	"lua",
-	"python",
-	"typescript",
-	"tsx",
-	"css",
-	"rust",
-	"java",
-	"yaml",
+  "bash",
+  "c",
+  "javascript",
+  "json",
+  "lua",
+  "python",
+  "typescript",
+  "tsx",
+  "css",
+  "rust",
+  "java",
+  "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -173,18 +175,23 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-	{
-		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
-	},
-	--{
-	-- "gorbit99/codewindow.nvim",
-	--   config = function()
-	--     local codewindow = require "codewindow"
-	--     codewindow.setup()
-	--     codewindow.apply_default_keybinds()
-	--   end,
-	-- }
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  {
+    "akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end
+  }
+  --{
+  -- "gorbit99/codewindow.nvim",
+  --   config = function()
+  --     local codewindow = require "codewindow"
+  --     codewindow.setup()
+  --     codewindow.apply_default_keybinds()
+  --   end,
+  -- }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
