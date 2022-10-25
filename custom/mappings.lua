@@ -5,8 +5,9 @@ M.mappings = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
   n = {
-    ["<leader>q"] = { "<cmd>TroubleToggle<cr>", opts = { silent = true, noremap = true } },
-    ["<leader>1"] = { "<cmd>Telescope find_files<cr>", opts = { silent = true, noremap = true } },
+    ["<leader>a"] = { ":lua vim.lsp.buf.hover()<cr>", opts = { silent = true, noremap = true } },
+    ["<leader>1"] = { ":Telescope find_files<cr>", opts = { silent = true, noremap = true } },
+    ["<leader>z"] = { ":lua vim.diagnostic.open_float()<cr>", opts = { silent = true, noremap = true } },
   },
 }
 
