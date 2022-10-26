@@ -12,15 +12,25 @@ vim.opt.relativenumber = true
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
 lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
 lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
-lvim.keys.normal_mode["<F7>"] = ":ToggleTerm<CR>"
--- lvim.builtin.terminal["<F7>"] = lvim.keys.normal_mode["<F7>"]
+-- lvim.transparent_window = true
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "prettierd",
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+  },
+}
+lvim.format_on_save = {
+  pattern = "*.rs,*.go,*.json,*.lua,*.js,*.jsx,*.ts,*.tsx",
+  timeout = 1000,
+  filter = require("lvim.lsp.utils").format_filter,
+}
 
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -179,11 +189,6 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  {
-    "akinsho/toggleterm.nvim", tag = '*', config = function()
-      require("toggleterm").setup()
-    end
-  }
   --{
   -- "gorbit99/codewindow.nvim",
   --   config = function()
