@@ -9,6 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 vim.opt.relativenumber = true
+vim.opt.cursorline = false
 
 -- general
 lvim.log.level = "warn"
