@@ -10,7 +10,18 @@ local sources = {
   b.diagnostics.eslint,
   b.code_actions.eslint,
   -- webdev stuff
-  b.formatting.prettierd.with { filetypes = { "javascript", "markdown", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" } },
+  b.formatting.eslint_d.with {
+    filetypes = {
+      "javascript",
+      "markdown",
+      "javascriptreact",
+      "javascript.jsx",
+      "typescript",
+      "typescriptreact",
+      "typescript.tsx",
+    },
+  },
+
   -- Lua
   b.formatting.stylua,
 
