@@ -19,14 +19,18 @@ lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
 lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
+
+-- lvim.builtin.lualine.style = "default" -- or "none"
 -- lvim.transparent_window = true
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
+
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
   {
     command = "prettierd",
-    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "*.tsx", "*.jsx" },
   },
-}
+})
+
 lvim.format_on_save = {
   pattern = "*.rs,*.go,*.json,*.lua,*.js,*.jsx,*.ts,*.tsx",
   timeout = 1000,
@@ -198,6 +202,10 @@ lvim.plugins = {
   --     codewindow.apply_default_keybinds()
   --   end,
   -- }
+  {
+    "catppuccin/nvim",
+    as = "catppuccin",
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

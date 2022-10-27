@@ -2171,6 +2171,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
