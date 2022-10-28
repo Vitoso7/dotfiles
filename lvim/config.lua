@@ -10,6 +10,8 @@ an executable
 
 vim.opt.relativenumber = true
 vim.opt.cursorline = false
+-- vim.opt.smartindent = true
+vim.opt.smartcase = true
 
 -- general
 lvim.log.level = "warn"
