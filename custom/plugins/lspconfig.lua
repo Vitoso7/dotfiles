@@ -5,7 +5,7 @@ local types = require "cmp.types"
 
 local lspconfig = require "lspconfig"
 
-function deprioritize_snippet(entry1, entry2)
+function DesprioritizeSnippets(entry1, entry2)
   if entry1:get_kind() == types.lsp.CompletionItemKind.Snippet then
     return false
   end
@@ -18,7 +18,7 @@ cmp.setup {
   sorting = {
     priority_weight = 2,
     comparators = {
-      deprioritize_snippet,
+      DesprioritizeSnippets,
       cmp.config.compare.offset,
       cmp.config.compare.exact,
       cmp.config.compare.scopes,

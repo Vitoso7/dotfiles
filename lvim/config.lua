@@ -8,10 +8,11 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+-- TODO fix insertline below
+
 vim.opt.relativenumber = true
 vim.opt.cursorline = false
 -- vim.opt.smartindent = true
-vim.opt.smartcase = true
 
 -- general
 lvim.log.level = "warn"
@@ -22,8 +23,12 @@ lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
 lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
 
+lvim.builtin.bufferline.options = {
+  separator_style = { "", "" },
+}
+
 -- lvim.builtin.lualine.style = "default" -- or "none"
--- lvim.transparent_window = true
+lvim.transparent_window = true
 
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({

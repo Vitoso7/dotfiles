@@ -9,6 +9,7 @@ local b = null_ls.builtins
 local sources = {
   b.diagnostics.eslint_d,
   -- b.code_actions.eslint_d,
+
   -- webdev stuff
   b.formatting.prettierd.with {
     filetypes = {

@@ -2,9 +2,9 @@ local M = {}
 local override = require "custom.override"
 
 M.ui = {
-  -- theme = "catppuccin",
+  -- theme = "tokyonight",
   theme = "tokyonight",
-  -- transparency = false,
+  transparency = true,
 }
 
 M.mappings = require "custom.mappings"
