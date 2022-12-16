@@ -7,3 +7,17 @@ if status is-interactive
 end
 
 alias lv="lvim"
+alias v="nvim"
+alias fuckyou="git push -f"
+
+function nvm
+bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
+
+# pnpm
+set -gx PNPM_HOME "/Users/victor.lisboa.ps/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
