@@ -36,13 +36,12 @@ cmp.setup {
 local servers = {
   "html",
   "gopls",
-  "tsserver",
   "cssls",
   "sqls",
   "tailwindcss",
   "svelte",
   "rust_analyzer",
-  "quick_lint_js"
+  "quick_lint_js",
 }
 
 for _, lsp in ipairs(servers) do
@@ -51,3 +50,13 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  root_dir = lspconfig.util.root_pattern "package.json",
+}
+
+lspconfig.denols.setup {
+  on_attach = on_attach,
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+}
