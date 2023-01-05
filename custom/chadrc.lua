@@ -2,8 +2,8 @@ local M = {}
 local override = require "custom.override"
 
 M.ui = {
-  -- theme = "tokyodark",
-  theme = "tokyodark",
+  -- theme = "catppuccin",
+  theme = "catppuccin",
   transparency = true,
 }
 

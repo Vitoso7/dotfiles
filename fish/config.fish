@@ -17,6 +17,8 @@ end
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
 
+set fish_greeting
+
 # pnpm
 set -gx PNPM_HOME "/Users/victor.lisboa.ps/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH

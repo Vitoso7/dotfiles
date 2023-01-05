@@ -8,7 +8,7 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eilancosman/tide\x40v5\x1ehalostatue/fish\x2drust
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:vi_mode\x1epwd\x1egit
-SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1erustc\x1ejava\x1ego\x1ekubectl
+SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1erustc\x1ejava\x1ephp\x1ego\x1ekubectl
 SETUVAR fish_color_autosuggestion:8A9199
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:55B4D4
