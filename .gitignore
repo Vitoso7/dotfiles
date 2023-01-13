@@ -8,3 +8,5 @@
 
 !starship.toml
 !.gitignore
+
+.DS_Store
