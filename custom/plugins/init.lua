@@ -14,6 +14,8 @@ return {
     end,
   },
 
+  ["eandrju/cellular-automaton.nvim"] = {},
+
   -- ["jubnzv/virtual-types.nvim"] = {},
 
   -- ["gorbit99/codewindow.nvim"] = {
