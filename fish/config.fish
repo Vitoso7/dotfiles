@@ -9,6 +9,7 @@ end
 alias lv="lvim"
 alias v="nvim"
 alias fuckyou="git push -f"
+alias b="brew"
 
 function nvm
 bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
