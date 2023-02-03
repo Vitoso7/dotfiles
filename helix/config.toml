@@ -8,5 +8,8 @@ insert = "block"
 normal = "block"
 select = "underline"
 
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode

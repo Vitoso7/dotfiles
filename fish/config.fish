@@ -12,7 +12,7 @@ alias fuckyou="git push -f"
 alias b="brew"
 
 function nvm
-bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end
 
 set -x NVM_DIR ~/.nvm
