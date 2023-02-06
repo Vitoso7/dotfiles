@@ -4,4 +4,4 @@ auto-format = false
 
 [[language]]
 name = "typescript"
-auto-format = true
+auto-format = false
