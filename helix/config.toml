@@ -2,14 +2,16 @@ theme = "tokyonight"
 
 [editor]
 line-number = "relative"
+bufferline = "multiple"
 
 [editor.cursor-shape]
-insert = "block"
-normal = "block"
-select = "underline"
+select = "block"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+tab = ":buffer-next"
+space = { x = ":buffer-close" }
+# X = "extend_line_above"
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
