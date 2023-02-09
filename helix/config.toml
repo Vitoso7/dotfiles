@@ -13,5 +13,14 @@ tab = ":buffer-next"
 space = { x = ":buffer-close" }
 # X = "extend_line_above"
 
+[editor.statusline]
+# left = ["mode", "spinner"]
+# center = ["file-name"]
+# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "( •_•)"
+mode.insert = "(〜^∇^)〜"
+mode.select = "(⌐■_■)"
+
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
