@@ -20,7 +20,11 @@ space = { x = ":buffer-close" }
 separator = "│"
 mode.normal = "( •_•)"
 mode.insert = "(〜^∇^)〜"
-mode.select = "(⌐■_■)"
+mode.select = "(⌐▨_▨)"
+
+# ┬──┬◡ﾉ(° -°ﾉ)
+# (╯’□’)╯︵ ┻━┻
+# (⌐▨_▨) (⌐■_■)
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
