@@ -8,9 +8,9 @@ local b = null_ls.builtins
 
 local sources = {
   -- Web stuff
-  b.diagnostics.eslint_d,
+  -- b.diagnostics.eslint_d,
   -- b.code_actions.eslint_d,
-  b.formatting.prettierd.with {
+  b.formatting.eslint_d.with {
     filetypes = {
       "javascript",
       "markdown",

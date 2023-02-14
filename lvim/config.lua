@@ -24,7 +24,7 @@ lvim.keys.normal_mode["<leader>a"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>z"] = ":lua vim.diagnostic.open_float()<CR>"
 
 lvim.builtin.bufferline.options = {
-  separator_style = { "", "" },
+    separator_style = { "", "" },
 }
 
 -- lvim.builtin.lualine.style = "default" -- or "none"
@@ -32,16 +32,16 @@ lvim.transparent_window = true
 
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
-  {
-    command = "prettierd",
-    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "*.tsx", "*.jsx" },
-  },
+    {
+        command = "prettierd",
+        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "*.tsx", "*.jsx" },
+    },
 })
 
 lvim.format_on_save = {
-  pattern = "*.rs,*.go,*.json,*.lua,*.js,*.jsx,*.ts,*.tsx",
-  timeout = 1000,
-  filter = require("lvim.lsp.utils").format_filter,
+    pattern = "*.rs,*.go,*.json,*.lua,*.js,*.jsx,*.ts,*.tsx",
+    timeout = 1000,
+    filter = require("lvim.lsp.utils").format_filter,
 }
 
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -103,18 +103,18 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -197,22 +197,22 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  --{
-  -- "gorbit99/codewindow.nvim",
-  --   config = function()
-  --     local codewindow = require "codewindow"
-  --     codewindow.setup()
-  --     codewindow.apply_default_keybinds()
-  --   end,
-  -- }
-  {
-    "catppuccin/nvim",
-    as = "catppuccin",
-  },
+    {
+        "folke/trouble.nvim",
+        cmd = "TroubleToggle",
+    },
+    --{
+    -- "gorbit99/codewindow.nvim",
+    --   config = function()
+    --     local codewindow = require "codewindow"
+    --     codewindow.setup()
+    --     codewindow.apply_default_keybinds()
+    --   end,
+    -- }
+    {
+        "catppuccin/nvim",
+        as = "catppuccin",
+    },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

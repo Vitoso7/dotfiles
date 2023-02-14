@@ -5,6 +5,7 @@
 !helix/
 !fish/
 !lvim/
+!nvim/
 
 !starship.toml
 !.gitignore

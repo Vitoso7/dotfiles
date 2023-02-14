@@ -41,7 +41,6 @@ local servers = {
   "tailwindcss",
   "svelte",
   "rust_analyzer",
-  "quick_lint_js",
 }
 
 for _, lsp in ipairs(servers) do
@@ -56,7 +55,7 @@ lspconfig.tsserver.setup {
   root_dir = lspconfig.util.root_pattern "package.json",
 }
 
-lspconfig.denols.setup {
-  on_attach = on_attach,
-  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-}
+-- lspconfig.denols.setup {
+--   on_attach = on_attach,
+--   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+-- }

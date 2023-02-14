@@ -14,7 +14,7 @@ return {
     end,
   },
 
-  ["eandrju/cellular-automaton.nvim"] = {},
+  -- ["eandrju/cellular-automaton.nvim"] = {},
 
   -- ["jubnzv/virtual-types.nvim"] = {},
 
