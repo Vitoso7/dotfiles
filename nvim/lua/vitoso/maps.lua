@@ -7,9 +7,11 @@ keymap.set('n', 'x', '"_x')
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
+keymap.set('n', 'gl', '$')
+keymap.set('n', 'gh', '_')
 
 -- Delete a word backwards
-keymap.set('n', 'dw', 'vb"_d')
+-- keymap.set('n', 'dw', 'vb"_d')
 
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
