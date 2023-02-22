@@ -22,6 +22,7 @@ lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<leader>x"] = ":bd<CR>"
 lvim.keys.normal_mode["<leader>k"] = ":lua vim.lsp.buf.hover()<CR>"
 lvim.keys.normal_mode["<leader>d"] = ":lua vim.diagnostic.open_float()<CR>"
+lvim.tokyonight_dark_float = false
 
 lvim.builtin.bufferline.options = {
   separator_style = { "", "" },
@@ -58,6 +59,21 @@ lvim.keys.normal_mode["<TAB>"] = ":BufferLineCycleNext<CR>"
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
+
+lvim.builtin.telescope = {
+  active = true,
+  defaults = {
+    layout_strategy = "horizontal",
+  },
+  pickers = {
+    git_files = {
+      hidden = true,
+    },
+    live_grep = {
+      hidden = true,
+    },
+  },
+}
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
