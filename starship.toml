@@ -13,10 +13,10 @@ $golang\
 $elixir\
 $java\
 $php\
-[](fg:#212736 bg:#1d2230)\
-$time\
-[ ](fg:#1d2230)\
-\n$character"""
+[ ](fg:#212736)\
+"""
+
+# add_newline = false
 
 [directory]
 style = "fg:#394260 bg:#CBA6F7"
@@ -69,11 +69,11 @@ symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#CBA6F7 bg:#212736)]($style)'
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+# [time]
+# disabled = false
+# time_format = "%R" # Hour:Minute Format
+# style = "bg:#1d2230"
+# format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 
 # format = """
@@ -105,7 +105,7 @@ format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 # """
 #
 # # Disable the blank line at the start of the prompt
-# # add_newline = false
+# add_newline = false
 #
 # # You can also replace your username with a neat symbol like   or disable this
 # # and use the os module below
