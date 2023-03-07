@@ -6,6 +6,7 @@
 !fish/
 !lvim/
 !nvim/
+!zellij/
 
 !starship.toml
 !.gitignore
