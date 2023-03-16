@@ -12,7 +12,7 @@ esc = ["collapse_selection", "keep_primary_selection"]
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
 space = { x = ":buffer-close" }
-V = ["extend_line_below", "extend_to_line_end", "select_mode"]
+V = ["select_mode", "extend_to_line_bounds"]
 # X = "extend_line_above"
 
 [editor.statusline]
