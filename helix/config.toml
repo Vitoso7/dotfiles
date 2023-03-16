@@ -15,6 +15,9 @@ space = { x = ":buffer-close" }
 V = ["select_mode", "extend_to_line_bounds"]
 # X = "extend_line_above"
 
+[keys.select]
+Y = ":clipboard-yank"
+
 [editor.statusline]
 # left = ["mode", "spinner"]
 # center = ["file-name"]
