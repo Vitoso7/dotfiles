@@ -40,7 +40,7 @@ local servers = {
   "sqls",
   "tailwindcss",
   "svelte",
-  "rust_analyzer",
+  "rust-analyzer",
 }
 
 for _, lsp in ipairs(servers) do

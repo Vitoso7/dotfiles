@@ -8,8 +8,7 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
--- TODO fix insertline below
-
+-- general
 vim.opt.relativenumber = true
 vim.opt.cursorline = false
 vim.opt.guicursor = "i:block"
@@ -45,35 +44,17 @@ lvim.format_on_save = {
   filter = require("lvim.lsp.utils").format_filter,
 }
 
--- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
-
--- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = "space"
--- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<TAB>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-TAB>"] = ":BufferLineCyclePrev<CR>"
 
+
+-- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
-
-lvim.builtin.telescope = {
-  active = true,
-  defaults = {
-    layout_strategy = "horizontal",
-  },
-  pickers = {
-    git_files = {
-      hidden = true,
-    },
-    live_grep = {
-      hidden = true,
-    },
-  },
-}
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -99,7 +80,6 @@ lvim.builtin.telescope = {
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- vim.opt.smartindent = true
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -112,7 +92,7 @@ lvim.builtin.telescope = {
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
---lvim.builtin.alpha.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -213,16 +193,12 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 -- Additional Plugins
-lvim.plugins = {
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  {
-    "catppuccin/nvim",
-    as = "catppuccin",
-  },
-}
+-- lvim.plugins = {
+--     {
+--       "folke/trouble.nvim",
+--       cmd = "TroubleToggle",
+--     },
+-- }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
