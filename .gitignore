@@ -1,20 +1,10 @@
 /*
 
+!custom/
 !kitty/
 !helix/
 !fish/
 !lvim/
-
-!nvim/
-
-/nvim/*
-
-!/nvim/lua/
-
-/nvim/lua/*
-
-!/nvim/lua/custom/
-
 !zellij/
 
 !starship.toml
