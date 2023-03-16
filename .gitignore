@@ -9,6 +9,10 @@
 
 /nvim/*
 
+!/nvim/lua/
+
+/nvim/lua/*
+
 !/nvim/lua/custom/
 
 !zellij/
