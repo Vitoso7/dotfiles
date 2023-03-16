@@ -1,11 +1,16 @@
 /*
 
-!custom/
 !kitty/
 !helix/
 !fish/
 !lvim/
+
 !nvim/
+
+/nvim/*
+
+!/nvim/custom/
+
 !zellij/
 
 !starship.toml
