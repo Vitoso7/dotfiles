@@ -1,4 +1,4 @@
-theme = "ayu_dark_transparent"
+theme = "catppuccin_frape"
 
 [editor]
 line-number = "relative"
