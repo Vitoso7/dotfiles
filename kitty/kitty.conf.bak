@@ -992,7 +992,7 @@ background_opacity 1
 #: this option when reloading the config will only work if
 #: dynamic_background_opacity was enabled in the original config.
 
-background_image ~/.config/kitty/backgrounds/ringo-op.png
+background_image ~/.config/kitty/backgrounds/godhand-sacrifice-op40.png
 
 #: Path to a background image. Must be in PNG format.
 
@@ -2169,6 +2169,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Catppuccin-Macchiato
 include current-theme.conf
 # END_KITTY_THEME
