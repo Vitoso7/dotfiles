@@ -3,10 +3,8 @@ fisher
 htop
 nvim.bak
 yarn
-
 !nvim/
 nvim/*
 !nvim/lua/
 nvim/lua/*
 !nvim/lua/custom/
-
