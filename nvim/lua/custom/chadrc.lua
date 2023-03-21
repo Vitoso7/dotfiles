@@ -5,11 +5,20 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "onedark",
+  theme = "ayu_dark",
   theme_toggle = { "onedark", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+  transparency = true,
+
+   statusline = {
+    theme = "vscode", -- default/vscode/vscode_colored/minimal
+
+    -- default/round/block/arrow separators work only for default statusline theme
+    -- round and block will work for minimal theme only
+    separator_style = "default",
+  },
 }
 
 M.plugins = "custom.plugins"
