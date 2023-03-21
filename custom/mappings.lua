@@ -1,28 +1,15 @@
+---@type MappingsTable
 local M = {}
 
-M.mappings = {
-  i = {
-    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-  },
+M.general = {
   n = {
-    ["<leader>a"] = { ":lua vim.lsp.buf.hover()<cr>", opts = { silent = true, noremap = true } },
-    ["<leader>z"] = { ":lua vim.diagnostic.open_float()<cr>", opts = { silent = true, noremap = true } },
-    ["<C-\\>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "toggle floating term",
-    },
-  },
-  t = {
-    -- toggle in terminal mode
-    ["<C-\\>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "toggle floating term",
-    },
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["gl"] = { "$", "goto end of line", opts = { nowait = true } },
+    ["gh"] = { "_", "goto start of line", opts = { nowait = true } },
+    ["<leader>f"] = { "<cmd> Telescope find_files <CR>", "find files" , opts = {nowait = true}}
   },
 }
+
+-- more keybinds!
 
 return M

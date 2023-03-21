@@ -1,4 +1,12 @@
+-- local autocmd = vim.api.nvim_create_autocmd
+
+-- Auto resize panes when resizing nvim window
+-- autocmd("VimResized", {
+--   pattern = "*",
+--   command = "tabdo wincmd =",
+-- })
+
 vim.opt.relativenumber = true
-vim.opt.guicursor = "i:block"
--- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format(nil, 5000)]]
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+vim.opt.guicursor = "i:block"
+

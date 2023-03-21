@@ -1,19 +1,29 @@
+---@type ChadrcConfig
 local M = {}
-local override = require "custom.override"
 
---bruh
+-- Path to overriding theme and highlights files
+local highlights = require "custom.highlights"
+
 M.ui = {
-  theme = "tokyodark",
+  theme = "ayu_dark",
+  theme_toggle = { "onedark", "one_light" },
+
+  hl_override = highlights.override,
+  hl_add = highlights.add,
   transparency = true,
-}
 
-M.mappings = require "custom.mappings"
+   statusline = {
+    theme = "vscode", -- default/vscode/vscode_colored/minimal
 
-M.plugins = {
-  user = require "custom.plugins",
-  override = {
-    ["williamboman/mason.nvim"] = override.mason,
-    ["NvChad/ui"] = override.ui,
+    -- default/round/block/arrow separators work only for default statusline theme
+    -- round and block will work for minimal theme only
+    separator_style = "default",
   },
 }
+
+M.plugins = "custom.plugins"
+
+-- check core.mappings for table structure
+M.mappings = require "custom.mappings"
+
 return M
