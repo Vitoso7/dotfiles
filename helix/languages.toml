@@ -5,3 +5,7 @@ auto-format = true
 [[language]]
 name = "typescript"
 auto-format = false
+
+[[language]]
+name = "java"
+auto-format = true
