@@ -1,4 +1,4 @@
-theme = "catppuccin_frape"
+theme = "ayu_dark_transparent"
 
 [editor]
 line-number = "relative"
@@ -13,10 +13,14 @@ tab = ":buffer-next"
 S-tab = ":buffer-previous"
 space = { x = ":buffer-close" }
 V = ["select_mode", "extend_to_line_bounds"]
+Y = ":clipboard-yank"
 # X = "extend_line_above"
 
 [keys.select]
 Y = ":clipboard-yank"
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
 [editor.statusline]
 # left = ["mode", "spinner"]
@@ -32,8 +36,6 @@ mode.select = "(⌐▨_▨)"
 # (╯’□’)╯︵ ┻━┻
 # (⌐▨_▨) (⌐■_■)
 
-[keys.insert]
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
 [editor.file-picker]
 hidden = false
