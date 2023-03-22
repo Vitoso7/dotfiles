@@ -3,6 +3,10 @@ fisher
 htop
 nvim.bak
 yarn
+simple-update-notifier
+coc
+configstore
+dotfiles-public
 
 !nvim/
 nvim/*
