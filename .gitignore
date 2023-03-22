@@ -7,6 +7,9 @@ simple-update-notifier
 coc
 configstore
 dotfiles-public
+plugins
+package.json
+package-lock.json
 
 !nvim/
 nvim/*
