@@ -10,7 +10,8 @@ alias lv="lvim"
 alias v="nvim"
 alias fuckyou="git push -f"
 alias b="brew"
-# alias ll="exa -l"
+alias zel="zellij"
+alias nnn="nnn -de"
 
 function nvm
   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
@@ -25,3 +26,9 @@ set fish_greeting
 set -gx PNPM_HOME "/Users/victor.lisboa.ps/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+
+set -Ux EDITOR hx
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
