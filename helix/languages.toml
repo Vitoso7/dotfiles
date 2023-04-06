@@ -4,8 +4,12 @@ auto-format = true
 
 [[language]]
 name = "typescript"
-auto-format = false
+auto-format = true
 
 [[language]]
 name = "java"
+auto-format = true
+
+[[language]]
+name = "toml"
 auto-format = true

@@ -2,13 +2,34 @@ inherits = "kanagawa"
 
 "ui.background" = { bg = "#000000" }
 
-"ui.selection" = { bg = "surface1" }
+"ui.selection" = { bg = "base" }
 
 "ui.cursor" = { fg = "base", bg = "secondary_cursor" }
 "ui.cursor.primary" = { fg = "base", bg = "rosewater" }
-"ui.cursor.match" = { fg = "peach", modifiers = ["bold"] }
+"ui.cursor.match" = { fg = "#FF5D62", modifiers = ["bold"] }
+
+"ui.menu.selected" = { fg = "#FF5D62" }
 
 "ui.cursorline.primary" = { bg = "cursorline" }
+
+"ui.statusline.normal" = { bg = "#7FB4CA", modifiers = ["bold"], fg = "#000000" }
+"ui.statusline.insert" = { bg = "#98BB6C", modifiers = ["bold"], fg = "#000000" }
+"ui.statusline.select" = { bg = "#FF9E3B", modifiers = ["bold"], fg = "#000000" }
+"ui.statusline.separator" = { bg = "#FF9E3B", fg = "#FF9E3B" }
+
+# "ui.bufferline.background" = { bg = "surface0" }
+# "ui.bufferline" = { fg = "surface1", bg = "mantle" }
+"ui.bufferline.active" = { fg = "#FF5D62", modifiers = ["bold"] }
+
+"ui.statusline" = { modifiers = ["bold"] }
+
+"ui.linenr.selected" = { fg = "#FF5D62" }
+
+# "ui.text.focus" = {  }
+
+# "ui.menu" = { bg = "#FF5D62" }
+
+# "ui.background.separator" = { bg = "#FF5D62" }
 
 [palette]
 # catppuccin palette colors

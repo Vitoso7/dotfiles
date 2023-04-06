@@ -3,6 +3,10 @@ theme = "custom_kanagawa"
 [editor]
 line-number = "relative"
 bufferline = "multiple"
+color-modes = true
+
+[editor.lsp]
+display-messages = true
 
 [editor.cursor-shape]
 select = "block"
@@ -14,7 +18,6 @@ S-tab = ":buffer-previous"
 space = { x = ":buffer-close" }
 V = ["select_mode", "extend_to_line_bounds"]
 Y = ":clipboard-yank"
-# X = "extend_line_above"
 C-f = [":new", ":insert-output lf-pick", ":theme default", "select_all", "split_selection_on_newline", "goto_file", "goto_last_modified_file", ":buffer-close!", ":theme tokyonight_storm"]
 
 [keys.select]
@@ -24,13 +27,10 @@ Y = ":clipboard-yank"
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name"]
-# enter = ["file-name"]
-# right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-# separator = "x"
-mode.insert = "LIGMA"
-mode.normal = "BALLS"
-mode.select = "(⌐▨_▨)"
+left = ["mode", "file-name", "spinner"]
+mode.insert = " LIGMA "
+mode.normal = " BALLS "
+mode.select = "<(⌐▨_▨)>"
 
 # ░▒▓
 # ┬──┬◡ﾉ(° -°ﾉ)
