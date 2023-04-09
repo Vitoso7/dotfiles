@@ -28,15 +28,9 @@ j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
 [editor.statusline]
 left = ["mode", "file-name", "spinner"]
-mode.insert = " LIGMA "
-mode.normal = " BALLS "
+mode.insert = " DEEZ "
+mode.normal = " NUTZ "
 mode.select = "<(⌐▨_▨)>"
-
-# ░▒▓
-# ┬──┬◡ﾉ(° -°ﾉ)
-# (╯’□’)╯︵ ┻━┻
-# (⌐▨_▨) (⌐■_■)
-
 
 [editor.file-picker]
 hidden = false

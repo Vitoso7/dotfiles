@@ -17,19 +17,14 @@ inherits = "kanagawa"
 "ui.statusline.select" = { bg = "#FF9E3B", modifiers = ["bold"], fg = "#000000" }
 "ui.statusline.separator" = { bg = "#FF9E3B", fg = "#FF9E3B" }
 
-# "ui.bufferline.background" = { bg = "surface0" }
-# "ui.bufferline" = { fg = "surface1", bg = "mantle" }
+"ui.bufferline.background" = { bg = "#16161D" }
 "ui.bufferline.active" = { fg = "#FF5D62", modifiers = ["bold"] }
 
-"ui.statusline" = { modifiers = ["bold"] }
+"ui.statusline" = { modifiers = ["bold"], bg = "#16161D" }
 
 "ui.linenr.selected" = { fg = "#FF5D62" }
 
-# "ui.text.focus" = {  }
-
-# "ui.menu" = { bg = "#FF5D62" }
-
-# "ui.background.separator" = { bg = "#FF5D62" }
+"ui.menu.scroll" = { fg = "#FF5D62" }
 
 [palette]
 # catppuccin palette colors

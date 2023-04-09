@@ -26,7 +26,7 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 20.0
+font_size 21.0
 
 #: Font size (in pts)
 
@@ -2169,6 +2169,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# Duotone Dark
+# kanagawabones
 include current-theme.conf
 # END_KITTY_THEME
