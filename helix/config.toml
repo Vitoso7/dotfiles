@@ -28,6 +28,7 @@ j = { k = "normal_mode" } # Maps `jk` to exit insert mode
 
 [editor.statusline]
 left = ["mode", "file-name", "spinner"]
+center = ["version-control"]
 mode.insert = " DEEZ "
 mode.normal = " NUTZ "
 mode.select = "<(⌐▨_▨)>"
