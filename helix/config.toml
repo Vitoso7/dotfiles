@@ -1,9 +1,14 @@
-theme = "custom_kanagawa"
+theme = "github_dark"
 
 [editor]
 line-number = "relative"
-bufferline = "multiple"
-color-modes = true
+color-modes = false
+auto-pairs = false
+scrolloff = 7
+mouse = false
+# rulers = [80]
+cursorline = true
+# bufferline = "multiple"
 
 [editor.lsp]
 display-messages = true
@@ -11,16 +16,53 @@ display-messages = true
 [editor.cursor-shape]
 select = "block"
 
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 0
+
 [keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"]
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
-space = { x = ":buffer-close" }
 V = ["select_mode", "extend_to_line_bounds"]
 Y = ":clipboard-yank"
+X = ["extend_line_up", "extend_to_line_bounds"]
+G = "goto_file_end"
+esc = ["collapse_selection", "keep_primary_selection"]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+P = ":clipboard-paste-before"
+
+[keys.normal.space]
+x = ":buffer-close"
+l = "last_picker"
+"=" = ":format"
+"+" = ":reload"
+i = ":toggle lsp.display-inlay-hints"
 
 [keys.select]
 Y = ":clipboard-yank"
+G = "goto_file_end"
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-tab = ":buffer-previous"
+tab = ":buffer-next"
+
+[keys.select.space]
+x = ":buffer-close"
 
 [keys.insert]
 C-space = "completion"
@@ -28,12 +70,19 @@ C-space = "completion"
 [keys.insert.j]
 k = "normal_mode" # Maps `jk` to exit insert mode
 
+# add version control
 [editor.statusline]
-left = ["mode", "file-name", "spinner"]
-center = ["version-control"]
+left = [
+  "spacer",
+  "mode",
+  # "spacer",
+  # "position-percentage",
+  # "spacer",
+  "file-name",
+  "spinner",
+]
+separator = "│"
+right = ["version-control", "spacer", "file-modification-indicator", "spacer"]
 mode.insert = "DEEZ"
 mode.normal = "NUTZ"
 mode.select = "(⌐▨_▨)"
-
-[editor.file-picker]
-hidden = false

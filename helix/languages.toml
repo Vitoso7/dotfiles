@@ -1,15 +1,67 @@
 [[language]]
 name = "rust"
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "typescript"
 auto-format = true
 
 [[language]]
-name = "java"
+name = "toml"
 auto-format = true
 
 [[language]]
-name = "toml"
+name = "bash"
 auto-format = true
+
+# I don't even use elixir lol
+# And is not working
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+file-types = ["ex", "exs", "heex"]
+roots = ["mix.exs"]
+auto-format = true
+diagnostic-severity = "Hint"
+comment-token = "#"
+indent = {tab-width = 2, unit = " "}
+language-server = {command = "elixir-ls"}
+
+# Jabba on its way of being the most terrible digusting programming language ever be like: ☕️😎🤙
+# TODO Use $HOME to remove /Users/...
+[[language]]
+name = "java"
+roots = ["pom.xml", "build.gradle"]
+language-server = { command = "java", timeout = 80, args = [
+     "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+     "-Dosgi.bundles.defaultStartLevel=4",
+     "-Declipse.product=org.eclipse.jdt.ls.core.product",
+     "-Dlog.level=ALL",
+     "-Xmx1G",
+     "--add-modules=ALL-SYSTEM",
+     "--add-opens",
+     "java.base/java.util=ALL-UNNAMED",
+     "--add-opens",
+     "java.base/java.lang=ALL-UNNAMED",
+     "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
+     "-jar",
+     "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
+     "-configuration",
+     "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
+     "-data",
+     "/Users/victorlisboa/.cache/jdtls_data"
+] }
+auto-format = false
+
+# Not Working
+[[language]]
+name = "fsharp"
+scope="source.fs"
+roots = ["fsproj", "sln", ".git"]
+injection-regex = "^fsharp$"
+file-types = ["fs", "fsx", "fsi"]
+comment-token = "//"
+indent = { tab-width = 4, unit = " " }
+auto-format = true
+language-server = { command = "fsautocomplete", args = ["--verbose"] }
+config = { AutomaticWorkspaceInit = true, FSharp.ExternalAutocomplete = true }

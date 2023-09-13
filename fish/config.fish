@@ -13,6 +13,11 @@ alias b="brew"
 alias zel="zellij"
 alias nnn="nnn -de"
 
+# Java is a cancer
+alias spring="mvn spring-boot:run"
+alias spring-local="mvn spring-boot:run -Dspring-boot.run.profiles=local"
+# Java is a cancer end
+
 function nvm
   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end

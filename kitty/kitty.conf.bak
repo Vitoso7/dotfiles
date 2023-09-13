@@ -8,7 +8,7 @@ include ./theme.conf
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family    JetBrainsMono Nerd Font Mono 
+font_family    JetBrainsMono Nerd Font
 bold_font      JetBrainsMono Nerd Font Mono Extra Bold 
 italic_font     JetBrainsMono Nerd Font Mono Italic
 bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
@@ -21,10 +21,10 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
-#:     font_family      Operator Mono Book
-#:     bold_font        Operator Mono Medium
-#:     italic_font      Operator Mono Book Italic
-#:     bold_italic_font Operator Mono Medium Italic
+#: font_family      Operator Mono Book
+#: bold_font        Operator Mono Medium
+#: italic_font      Operator Mono Book Italic
+#: bold_italic_font Operator Mono Medium Italic
 
 font_size 21.0
 
@@ -612,7 +612,7 @@ cursor_blink_interval 0
 
 #: Terminal bell {{{
 
-# enable_audio_bell yes
+enable_audio_bell no
 
 #: The audio bell. Useful to disable it in environments that require
 #: silence.
@@ -2169,6 +2169,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# kanagawabones
+# Ayu
 include current-theme.conf
 # END_KITTY_THEME
