@@ -62,7 +62,7 @@ i = ":toggle lsp.display-inlay-hints"
 space = "buffer_picker"
 f = "file_picker_in_current_directory"
 F = "file_picker"
-b = "file_picker_in_current_buffer"
+b = "file_picker_in_current_buffer_directory"
 
 [keys.select]
 S-tab = ":buffer-previous"
