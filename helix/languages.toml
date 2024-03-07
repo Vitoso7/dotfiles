@@ -3,8 +3,88 @@ name = "rust"
 auto-format = false
 
 [[language]]
+name = "zig"
+auto-format = false
+
+[[language]]
 name = "typescript"
-auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
+
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-language-server"]
+
+# [[language]]
+
+# [[language]]
+# name = "protobuf"
+# scope = "source.proto"
+# injection-regex = "protobuf"
+# file-types = ["proto"]
+# language-servers = ["bufls"]
+# roots = []
+# comment-token = "//"
+# indent = { tab-width = 2, unit = "  " }
+
+# [language-server.bufls]
+# command = "/Users/victorlisboa/go/bin/bufls"
+# args = ["serve"]
+
+
+# auto-format = true
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+display-messages = true
+
+[language-server.eslint.config]
+format = true
+nodePath = ""
+onIgnoredFiles = "off"
+packageManager = "yarn"
+quiet = false
+rulesCustomizations = []
+run = "onType"
+useESLintClass = false
+validate = "on"
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+codeActionOnSave = { mode = "all" }
+experimental = {}
+problems = { shortenToSingleLine = false }
+workingDirectory = { mode = "auto" }
+
+# Tailwind
+[language-server.tailwindcss-react]
+language-id = "typescriptreact"
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+config = {}
+
+[[language]]
+name = "markdown"
+formatter = { command = "deno", args = ["fmt", "-", "—ext", "md"] }
+# auto-format = true
 
 [[language]]
 name = "toml"
@@ -14,54 +94,60 @@ auto-format = true
 name = "bash"
 auto-format = true
 
+
 # I don't even use elixir lol
 # And is not working
-[[language]]
-name = "elixir"
-scope = "source.elixir"
-file-types = ["ex", "exs", "heex"]
-roots = ["mix.exs"]
-auto-format = true
-diagnostic-severity = "Hint"
-comment-token = "#"
-indent = {tab-width = 2, unit = " "}
-language-server = {command = "elixir-ls"}
+# [[language]]
+# name = "elixir"
+# scope = "source.elixir"
+# file-types = ["ex", "exs", "heex"]
+# roots = ["mix.exs"]
+# auto-format = true
+# diagnostic-severity = "Hint"
+# comment-token = "#"
+# indent = {tab-width = 2, unit = " "}
+# language-servers = {command = "elixir-ls"}
 
 # Jabba on its way of being the most terrible digusting programming language ever be like: ☕️😎🤙
-# TODO Use $HOME to remove /Users/...
 [[language]]
 name = "java"
 roots = ["pom.xml", "build.gradle"]
-language-server = { command = "java", timeout = 80, args = [
-     "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-     "-Dosgi.bundles.defaultStartLevel=4",
-     "-Declipse.product=org.eclipse.jdt.ls.core.product",
-     "-Dlog.level=ALL",
-     "-Xmx1G",
-     "--add-modules=ALL-SYSTEM",
-     "--add-opens",
-     "java.base/java.util=ALL-UNNAMED",
-     "--add-opens",
-     "java.base/java.lang=ALL-UNNAMED",
-     "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
-     "-jar",
-     "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
-     "-configuration",
-     "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
-     "-data",
-     "/Users/victorlisboa/.cache/jdtls_data"
-] }
+language-servers = ["java"]
 auto-format = false
 
+# TODO Use $HOME to remove /Users/...
+[language-server.java]
+command = "java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ALL -Xmx1G --add-modules=ALL-SYSTEM --add-opens --add-opens java.base/java.util=ALL-UNNAMED -javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar -jar /opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar -configuration /opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac -data /Users/victorlisboa/.cache/jdtls_data"
+timeout = 80
+args = [
+  "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+  "-Dosgi.bundles.defaultStartLevel=4",
+  "-Declipse.product=org.eclipse.jdt.ls.core.product",
+  "-Dlog.level=ALL",
+  "-Xmx1G",
+  "--add-modules=ALL-SYSTEM",
+  "--add-opens",
+  "java.base/java.util=ALL-UNNAMED",
+  "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
+  "-jar",
+  "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
+  "-configuration",
+  "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
+  "-data",
+  "/Users/victorlisboa/.cache/jdtls_data",
+]
+
+# TODO Svelte
+
 # Not Working
-[[language]]
-name = "fsharp"
-scope="source.fs"
-roots = ["fsproj", "sln", ".git"]
-injection-regex = "^fsharp$"
-file-types = ["fs", "fsx", "fsi"]
-comment-token = "//"
-indent = { tab-width = 4, unit = " " }
-auto-format = true
-language-server = { command = "fsautocomplete", args = ["--verbose"] }
-config = { AutomaticWorkspaceInit = true, FSharp.ExternalAutocomplete = true }
+# [[language]]
+# name = "fsharp"
+# scope="source.fs"
+# roots = ["fsproj", "sln", ".git"]
+# injection-regex = "^fsharp$"
+# file-types = ["fs", "fsx", "fsi"]
+# comment-token = "//"
+# indent = { tab-width = 4, unit = " " }
+# auto-format = true
+# language-servers = { command = "fsautocomplete", args = ["--verbose"] }
+# config = { AutomaticWorkspaceInit = true, FSharp.ExternalAutocomplete = true }

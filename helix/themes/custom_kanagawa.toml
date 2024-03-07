@@ -12,9 +12,15 @@ inherits = "kanagawa"
 
 "ui.cursorline.primary" = { bg = "cursorline" }
 
-"ui.statusline.normal" = { bg = "#7FB4CA", modifiers = ["bold"], fg = "#000000" }
-"ui.statusline.insert" = { bg = "#98BB6C", modifiers = ["bold"], fg = "#000000" }
-"ui.statusline.select" = { bg = "#FF9E3B", modifiers = ["bold"], fg = "#000000" }
+"ui.statusline.normal" = { bg = "#7FB4CA", modifiers = [
+  "bold",
+], fg = "#000000" }
+"ui.statusline.insert" = { bg = "#98BB6C", modifiers = [
+  "bold",
+], fg = "#000000" }
+"ui.statusline.select" = { bg = "#FF9E3B", modifiers = [
+  "bold",
+], fg = "#000000" }
 "ui.statusline.separator" = { bg = "#FF9E3B", fg = "#FF9E3B" }
 
 "ui.bufferline.background" = { bg = "#16161D" }
@@ -27,7 +33,6 @@ inherits = "kanagawa"
 "ui.menu.scroll" = { fg = "#FF5D62" }
 
 [palette]
-# catppuccin palette colors
 rosewater = "#f2d5cf"
 flamingo = "#eebebe"
 pink = "#f4b8e4"

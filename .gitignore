@@ -10,6 +10,7 @@ dotfiles-public
 plugins
 package.json
 package-lock.json
+filezilla/filezilla.xml
 
 !nvim/
 nvim/*

@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export ANDROID_HOME:/Users/victorlisboa/Library/Android/sdk/
+SETUVAR --export ANDROID_HOME:/Users/victorlisboa/Library/Android/sdk
 SETUVAR --export EDITOR:hx
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3400

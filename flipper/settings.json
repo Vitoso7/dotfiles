@@ -1,0 +1,18 @@
+{
+  "androidHome": "/Users/victorlisboa/Library/Android/sdk",
+  "enableAndroid": true,
+  "enableIOS": true,
+  "enablePhysicalIOS": true,
+  "enablePrefetching": 2,
+  "idbPath": "/usr/local/bin/idb",
+  "darkMode": "dark",
+  "showWelcomeAtStartup": true,
+  "suppressPluginErrors": false,
+  "persistDeviceData": false,
+  "enablePluginMarketplace": false,
+  "marketplaceURL": "",
+  "enablePluginMarketplaceAutoUpdate": true,
+  "server": {
+    "enabled": false
+  }
+}

@@ -13,17 +13,21 @@ alias b="brew"
 alias zel="zellij"
 alias nnn="nnn -de"
 
-# Java is a cancer
+# Java is ass
 alias spring="mvn spring-boot:run"
 alias spring-local="mvn spring-boot:run -Dspring-boot.run.profiles=local"
-# Java is a cancer end
+# Java is ass end
 
-function nvm
-  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+# MacOS only
+if test "$OSTYPE"="darwin*"
+  function nvm
+    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  end
+  
+  set -x NVM_DIR ~/.nvm
+  nvm use default --silent
 end
 
-set -x NVM_DIR ~/.nvm
-nvm use default --silent
 
 set fish_greeting
 
@@ -32,8 +36,23 @@ set -gx PNPM_HOME "/Users/victor.lisboa.ps/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
+# set --export BUFLS "~/go/"
+# set --export PATH 
+
 set -Ux EDITOR hx
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+# bun end
+
+set --export RUBY "/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+set --export PATH $RUBY $PATH
+
+set --export ANDROID_HOME "/Users/$USER/Library/Android/sdk"
+set --export PATH "$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+set -gx SWIFTENV_ROOT "$HOME/.swiftenv"
+set -gx PATH "$SWIFTENV_ROOT/bin" $PATH
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+
+zoxide init fish | source
