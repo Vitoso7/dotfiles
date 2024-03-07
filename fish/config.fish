@@ -19,7 +19,7 @@ alias spring-local="mvn spring-boot:run -Dspring-boot.run.profiles=local"
 # Java is ass end
 
 # MacOS only
-if test "$OSTYPE"="darwin*"
+if test (uname) = "Darwin"
   function nvm
     bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
   end
