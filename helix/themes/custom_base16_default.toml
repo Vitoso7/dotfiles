@@ -1,6 +1,0 @@
-inherits = "base16_transparent"
-
-# ui.background = { fg = "#ffffff" }
-# ui.popup.fg = { fg = "#ffffff" }
-# ui.help.fg = "#000000"
-# ui.menu.scroll.bg = "#000000"
