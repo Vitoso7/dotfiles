@@ -1,4 +1,4 @@
-theme = "base16_transparent"
+theme = "custom_base16_default" #custom_base16_default
 
 [editor]
 line-number = "relative"
@@ -6,7 +6,9 @@ color-modes = false
 auto-pairs = false
 scrolloff = 7
 mouse = false
-cursorline = true
+cursorline = false
+popup-border = "all"
+end-of-line-diagnostics = "hint"
 # bufferline = "multiple"
 # rulers = [80]
 
@@ -24,6 +26,9 @@ render = true
 character = "┆" # Some characters that work well: "▏", "┆", "┊"
 skip-levels = 0
 
+[editor.inline-diagnostics]
+cursor-line = "error"
+
 [keys.normal]
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
@@ -33,6 +38,7 @@ X = ["extend_line_up", "extend_to_line_bounds"]
 G = "goto_file_end"
 esc = ["collapse_selection", "keep_primary_selection"]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+ret = "goto_word"
 C-k = [
   "extend_to_line_bounds",
   "delete_selection",
@@ -80,11 +86,8 @@ C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 [keys.select.space]
 x = ":buffer-close"
 
-[keys.insert]
-C-space = "completion"
-
-[keys.insert.j]
-k = "normal_mode" # Maps `jk` to exit insert mode
+# [keys.insert]
+# C-space = "completion"
 
 [editor.statusline]
 left = [

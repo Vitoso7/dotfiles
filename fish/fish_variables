@@ -2,6 +2,9 @@
 # VERSION: 3.0
 SETUVAR --export ANDROID_HOME:/Users/victorlisboa/Library/Android/sdk
 SETUVAR --export EDITOR:hx
+SETUVAR --export MAVEN_ALL_REPO_URL:https\x3a//nexus\x2egjccorp\x2ecom\x2ebr/repository/maven\x2dall/
+SETUVAR --export MAVEN_RELEASES_REPO_URL:https\x3a//nexus\x2egjccorp\x2ecom\x2ebr/repository/maven\x2dreleases/
+SETUVAR --export MAVEN_SNAPSHOTS_REPO_URL:https\x3a//nexus\x2egjccorp\x2ecom\x2ebr/repository/maven\x2dsnapshots/
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
@@ -53,7 +56,7 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dFF9940
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/victorlisboa/Android/Sdk/platform\x2dtools\x1e/Users/victorlisboa/Android/Sdk/tools\x2dbin\x1e/Users/victorlisboa/Android/Sdk/tools\x1e/Users/victorlisboa/Android/Sdk/emulator\x1e/Users/victor\x2elisboa\x2eps/\x2elocal/bin\x1e/Users/victorlisboa/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/Users/victor\x2elisboa\x2eps/\x2ecargo/bin\x1e/Users/victorlisboa/\x2ecargo/bin
+SETUVAR --export fish_user_paths:/Users/victorlisboa/go/bin\x1e/Library/Frameworks/Python\x2eframework/Versions/3\x2e13/bin\x1e/Users/victorlisboa/Android/Sdk/platform\x2dtools\x1e/Users/victorlisboa/Android/Sdk/tools\x2dbin\x1e/Users/victorlisboa/Android/Sdk/tools\x1e/Users/victorlisboa/Android/Sdk/emulator\x1e/Users/victor\x2elisboa\x2eps/\x2elocal/bin\x1e/Users/victorlisboa/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/Users/victor\x2elisboa\x2eps/\x2ecargo/bin\x1e/Users/victorlisboa/\x2ecargo/bin\x1e/Users/victorlisboa/\x2econfig/zide/bin\x1e/Users/victorlisboa/\x2eswiftenv/bin\x1e/opt/homebrew/opt/ruby/bin\x1e/opt/homebrew/lib/ruby/gems/3\x2e1\x2e0/bin\x1e/Users/victorlisboa/\x2ebun/bin\x1e/Users/victorlisboa/\x2econfig/kitty\x1e/Users/victor\x2elisboa\x2eps/Library/pnpm\x1e/Users/victorlisboa/\x2envm/versions/node/v20\x2e9\x2e0/bin\x1e/Users/victorlisboa/\x2esdkman/candidates/java/current/bin\x1e/usr/local/bin\x1e/System/Cryptexes/App/usr/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/local/bin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/bin\x1e/var/run/com\x2eapple\x2esecurity\x2ecryptexd/codex\x2esystem/bootstrap/usr/appleinternal/bin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/usr/local/go/bin\x1e/Applications/kitty\x2eapp/Contents/MacOS\x1e/Users/victorlisboa/Library/Android/sdk/tools\x1e/Users/victorlisboa/Library/Android/sdk/platform\x2dtools\x1e/Users/victorlisboa/\x2easdf/shims\x1e/opt/homebrew/opt/asdf/libexec/bin\x1e/Users/victorlisboa/\x2eswiftenv/shims\x1e/Applications/Ghostty\x2eapp/Contents/MacOS\x1e/Users/victorlisboa/\x2ejenv/shims\x1e/Users/victorlisboa/\x2ejenv/bin\x1e/Users/victorlisboa/\x2ervm/bin\x1e/Users/victorlisboa/\x2edotnet/tools
 SETUVAR tide_aws_bg_color:black
 SETUVAR tide_aws_color:yellow
 SETUVAR tide_aws_icon:\uf270

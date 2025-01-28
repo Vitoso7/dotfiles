@@ -1,63 +1,123 @@
+########
+# scls #
+########
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true                 # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false        # enable "unicode input"
+feature_paths = false                # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
 [[language]]
+name = "stub"
+scope = "text.stub"
+file-types = []
+shebangs = []
+roots = []
+auto-format = false
+language-servers = ["scls"]
+############
+# scls end #
+############
+
+[[lnguage]]
 name = "rust"
 auto-format = false
 
 [[language]]
 name = "zig"
 auto-format = false
+language-servers = ["scls", "zls"]
+
+[[language]]
+name = "go"
+auto-format = false
+language-servers = ["scls", "gopls"]
+
+[[language]]
+name = "scheme"
+auto-format = false
+language-servers = ["steel-language-server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = false
 
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "eslint"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
-auto-format = false
-
-[[language]]
-name = "jsx"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
-auto-format = false
-
-[[language]]
-name = "tsx"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+language-servers = ["scls", "typescript-language-server", "eslint"]
 formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 auto-format = false
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server", "tailwindcss-react", "eslint"]
+language-servers = [
+  "scls",
+  "typescript-language-server",
+  "tailwindcss-react",
+  "eslint",
+]
 formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 auto-format = false
 
 [[language]]
-name = "kotlin"
-language-servers = ["kotlin-language-server"]
+name = "jsx"
+language-servers = [
+  "scls",
+  "typescript-language-server",
+  "tailwindcss-react",
+  "eslint",
+]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
 
-# [[language]]
+[[language]]
+name = "tsx"
+language-servers = [
+  "typescript-language-server",
+  "scls",
+  "tailwindcss-react",
+  "eslint",
+]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = false
 
-# [[language]]
-# name = "protobuf"
-# scope = "source.proto"
-# injection-regex = "protobuf"
-# file-types = ["proto"]
-# language-servers = ["bufls"]
-# roots = []
-# comment-token = "//"
-# indent = { tab-width = 2, unit = "  " }
+[[language]]
+name = "python"
+language-servers = ["ruff", "basedpyright", "scls"]
 
-# [language-server.bufls]
-# command = "/Users/victorlisboa/go/bin/bufls"
-# args = ["serve"]
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
 
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
 
-# auto-format = true
+[language-server.basedpyright.config]
+basedpyright.analysis.diagnosticMode = "openFilesOnly"
 
 [language-server.eslint]
 args = ["--stdio"]
 command = "vscode-eslint-language-server"
 display-messages = true
 
+# Configuration reference: https://github.com/microsoft/vscode-eslint?tab=readme-ov-file#settings-options
 [language-server.eslint.config]
 format = true
 nodePath = ""
@@ -74,7 +134,102 @@ experimental = {}
 problems = { shortenToSingleLine = false }
 workingDirectory = { mode = "auto" }
 
-# Tailwind
+# [language-server.eslint.config]
+# validate = "on"
+# run = "onType"
+# workingDirectory.mode = "location"
+# experimental = { useFlatConfig = true }
+# format.enable = false
+# nodePath = ""
+
+# Rules/actions/reporting configuration
+# rulesCustomizations = [{ rule = "*", severity = "warn" }]
+# codeActionOnSave.enable = false
+# codeAction.disableRuleComment = { enable = true, location = "separateLine" }
+# codeAction.showDocumentation.enable = true
+# problems = { shortenToSingleLine = true }
+
+###########
+# BiomeJS #
+###########
+# [language-server.biome]
+# command = "biome"
+# args = ["lsp-proxy"]
+# display-messages = true
+# roots = ["biome.jsonc", "biome.json"]
+
+# [[language]]
+# name = "typescript"
+# language-servers = [
+#   { name = 'biome' },
+#   { name = 'typescript-language-server', except-features = [
+#     'format',
+#   ] },
+# ]
+# auto-format = false
+# formatter = { command = "biome", args = [
+#   "format",
+#   "--stdin-file-path",
+#   "a.ts",
+# ] }
+
+# [[language]]
+# name = "tsx"
+# language-servers = [
+#   { name = 'biome' },
+#   { name = 'typescript-language-server', except-features = [
+#     'format',
+#   ] },
+#   { name = 'tailwindcss-react' },
+# ]
+# auto-format = false
+# formatter = { command = "biome", args = [
+#   "format",
+#   "--stdin-file-path",
+#   "a.tsx",
+# ] }
+
+# [[language]]
+# name = "jsx"
+# language-servers = [
+#   { name = 'biome' },
+#   { name = 'typescript-language-server', except-features = [
+#     'format',
+#   ] },
+#   { name = 'tailwindcss-react' },
+# ]
+# auto-format = true
+# formatter = { command = "biome", args = [
+#   "format",
+#   "--stdin-file-path",
+#   "a.jsx",
+# ] }
+
+# [[language]]
+# name = "javascript"
+# language-servers = [
+#   { name = "typescript-language-server", except-features = [
+#     "format",
+#   ] },
+#   "biome",
+# ]
+# auto-format = false
+
+# [[language]]
+# name = "json"
+# language-servers = [
+#   { name = "vscode-json-language-server", except-features = [
+#     "format",
+#   ] },
+#   "biome",
+# ]
+###############
+# BiomeJS end #
+###############
+
+############
+# Tailwind #
+############
 [language-server.tailwindcss-react]
 language-id = "typescriptreact"
 command = "tailwindcss-language-server"
@@ -84,70 +239,41 @@ config = {}
 [[language]]
 name = "markdown"
 formatter = { command = "deno", args = ["fmt", "-", "—ext", "md"] }
-# auto-format = true
+auto-format = false
 
 [[language]]
 name = "toml"
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "bash"
 auto-format = true
 
-
-# I don't even use elixir lol
-# And is not working
-# [[language]]
-# name = "elixir"
-# scope = "source.elixir"
-# file-types = ["ex", "exs", "heex"]
-# roots = ["mix.exs"]
-# auto-format = true
-# diagnostic-severity = "Hint"
-# comment-token = "#"
-# indent = {tab-width = 2, unit = " "}
-# language-servers = {command = "elixir-ls"}
-
 # Jabba on its way of being the most terrible digusting programming language ever be like: ☕️😎🤙
-[[language]]
-name = "java"
-roots = ["pom.xml", "build.gradle"]
-language-servers = ["java"]
-auto-format = false
+# [[language]]
+# name = "java"
+# roots = ["pom.xml", "build.gradle"]
+# language-servers = ["java"]
+# auto-format = false
 
 # TODO Use $HOME to remove /Users/...
-[language-server.java]
-command = "java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ALL -Xmx1G --add-modules=ALL-SYSTEM --add-opens --add-opens java.base/java.util=ALL-UNNAMED -javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar -jar /opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar -configuration /opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac -data /Users/victorlisboa/.cache/jdtls_data"
-timeout = 80
-args = [
-  "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-  "-Dosgi.bundles.defaultStartLevel=4",
-  "-Declipse.product=org.eclipse.jdt.ls.core.product",
-  "-Dlog.level=ALL",
-  "-Xmx1G",
-  "--add-modules=ALL-SYSTEM",
-  "--add-opens",
-  "java.base/java.util=ALL-UNNAMED",
-  "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
-  "-jar",
-  "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
-  "-configuration",
-  "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
-  "-data",
-  "/Users/victorlisboa/.cache/jdtls_data",
-]
-
-# TODO Svelte
-
-# Not Working
-# [[language]]
-# name = "fsharp"
-# scope="source.fs"
-# roots = ["fsproj", "sln", ".git"]
-# injection-regex = "^fsharp$"
-# file-types = ["fs", "fsx", "fsi"]
-# comment-token = "//"
-# indent = { tab-width = 4, unit = " " }
-# auto-format = true
-# language-servers = { command = "fsautocomplete", args = ["--verbose"] }
-# config = { AutomaticWorkspaceInit = true, FSharp.ExternalAutocomplete = true }
+# [language-server.java]
+# command = "java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ALL -Xmx1G --add-modules=ALL-SYSTEM --add-opens --add-opens java.base/java.util=ALL-UNNAMED -javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar -jar /opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar -configuration /opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac -data /Users/victorlisboa/.cache/jdtls_data"
+# timeout = 80
+# args = [
+#   "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+#   "-Dosgi.bundles.defaultStartLevel=4",
+#   "-Declipse.product=org.eclipse.jdt.ls.core.product",
+#   "-Dlog.level=ALL",
+#   "-Xmx1G",
+#   "--add-modules=ALL-SYSTEM",
+#   "--add-opens",
+#   "java.base/java.util=ALL-UNNAMED",
+#   "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
+#   "-jar",
+#   "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
+#   "-configuration",
+#   "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
+#   "-data",
+#   "/Users/victorlisboa/.cache/jdtls_data",
+# ]
