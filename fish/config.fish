@@ -42,11 +42,10 @@ set -Ux MAVEN_SNAPSHOTS_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-
 # Nexus ojc end
 
 # pnpm
-set -gx PNPM_HOME "/Users/victor.lisboa.ps/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
-set -gx PATH "/Users/victorlisboa/.config/kitty" $PATH
+set -gx PATH "$HOME/.config/kitty" $PATH
 
 # set --export BUFLS "~/go/"
 # set --export PATH 

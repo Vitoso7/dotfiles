@@ -13,5 +13,4 @@ YAZI_CONFIG_HOME=~/.config/yazi/filetree_config /opt/homebrew/bin/yazi
 # increment=$((desired_width - current_width))
 
 # Resize the window with the calculated increment value
-# kitten @ resize-window narrower -3
 kitten @ --axis horizontal
