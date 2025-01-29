@@ -1,0 +1,9 @@
+inherits = "material_deep_ocean"
+
+"ui.cursorline.primary" = {}
+"ui.selection" = { bg = "#FFFFFF", fg = "#000000", modifiers = [
+  "bold",
+] } # "ui.linenr.selected" = { fg = "#3b3f52" }
+"ui.menu.selected" = { bg = "#3b3f52", modifiers = ["bold"] }
+"label" = "#FF5D62" # used for lifetimes in rust
+# "ui.background.fg"

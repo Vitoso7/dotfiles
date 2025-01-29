@@ -1,0 +1,658 @@
+clear
+ll
+all
+ll
+clear
+cd ..
+cd victorlisboa/
+clear
+cd BrowserExtensionProjects/
+clear
+cd fb-ads-filter/
+yarn dev
+clear
+ll
+all
+ll src/
+all src/
+clear
+ll
+clear
+l
+ll
+gitui
+clear
+starship init nu | save -f ~/.cache/starship/init.nu
+source ~/.cache/starship/init.nu
+clear
+cd ~/.config/
+ll
+ll all
+exe
+xa
+exa
+xlear
+clae
+clear
+$nu.env-path
+hx
+ll
+lv
+ls
+ll
+ls
+clear
+echo config.nu
+cd ..
+cd ~/.config/
+lv
+ls
+v
+vi
+ckeear
+cd nu
+vi config.nu
+clear
+echo $nu.config-path
+clear
+lv
+cd ..
+cd nushell/
+clear
+cd 
+cd BrowserExtensionProjects/fb-ads-filter/
+n
+ls
+git stauts
+git status
+clear
+git diff
+clEAR
+let-env STARSHIP_SHELL = "nu"
+clear
+nu -v
+clear
+let-env STARSHIP_SHELL = "nu"
+clear
+ni
+clear
+fish
+nu
+fish
+fish
+fish
+fish
+clear
+brew uninstall nushell
+fish
+clear
+clesar
+clear
+^clear 
+clear
+$env
+clear
+$env
+clear
+nu --help
+clear
+nu --help
+clear
+$env
+nu --help
+$nu.env-path
+hx `/Users/victorlisboa/Library/Application Support/nushell/env.nu`
+clear
+hx
+hx `/Users/victorlisboa/Library/Application Support/nushell/env.nu`
+source `/Users/victorlisboa/Library/Application Support/nushell/env.nu`
+cleer
+clear
+hx `/Users/victorlisboa/Library/Application Support/nushell/env.nu`
+$nu.config-path
+hx `/Users/victorlisboa/Library/Application Support/nushell/config.nu`
+curl -sS https://starship.rs/install.sh | sh<\n>
+clear
+hx `/Users/victorlisboa/Library/Application Support/nushell/config.nu`
+hx `/Users/victorlisboa/Library/Application Support/nushell/env.nu`
+clear
+config reset
+clear
+fish
+nu
+nu
+nu
+nu
+nu
+starship init nu | save -f ~/.cache/starship/init.nu
+clear
+$nu.config-path
+hx /Users/victorlisboa/Library/Application Support/nushell/config.nu
+hx `/Users/victorlisboa/Library/Application Support/nushell/config.nu`
+clear
+source `/Users/victorlisboa/Library/Application Support/nushell/config.nu`
+clear
+clear 
+clear
+lcear
+clear
+clxa
+clear
+clera
+clear
+clea
+clera
+clrac
+rlcea
+rclear
+clear
+clerA
+clear
+clean
+clear
+fish
+clear
+nu --help
+c;ear
+clear
+cd ~/.config/
+ckear
+clear
+ls 
+ls
+ll
+ls
+clear
+ls
+mkdir nushell
+cd nushell/
+clear
+touch config.nu
+clear
+cccc
+clear
+yarn run android
+open .
+open 
+fish
+nu
+clear
+clear 
+clear
+ls
+clear
+ls
+la
+ls
+clear
+ls
+clear
+fish
+clear
+nn
+nnn
+clear
+^clear 
+clear
+clear 
+clear
+cl
+cal
+clear
+nnn
+clear
+broot
+cd ~/.config/
+rm -rf broot/
+clear
+broo
+broot
+clear
+br
+clear 
+clear
+celar
+clear
+celar
+clear
+ls
+ld
+ls
+clear
+ls
+clear
+clear 
+clear
+ls
+nvm use 18
+clear
+ls
+clear
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin<\n>
+kitty -version
+kitty --version
+clear
+fish
+clear
+z
+zi
+cd personal
+cd
+cd personal-stuff/
+cd web-stuff/
+ls
+cd ..
+cd js/
+ls
+cd web-scout/
+clear
+cd 
+cd ~/.config/
+ls
+hx nushell/
+$nu.env-path
+XDG_CONFIG_HOME
+clear
+nvm
+$env<\n>
+clear
+env
+clear
+$env.XDG_CONFIG_HOME = "~/.config"
+clea
+clear
+nu
+nu
+nu
+nu
+fish
+z nu
+$env.XDG_CONFIG_HOME = "~/.config"
+$"($env.XDG_CONFIG_HOME)/nushell"
+ls 
+clear
+config nu
+fihs
+fish
+clear
+z nu
+clear
+hx config.nu
+pwd
+clear
+$env.XDG_CONFIG_HOME = "~/.config"
+ls
+cd
+$env.XDG_CONFIG_HOME = "~/.config"
+ls
+clear
+$"($env.XDG_CONFIG_HOME)/nushell"
+source ~/.config/nushell/config.nu
+cd ~/.config/
+hx
+z nu
+clear
+$nu.env-path
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+$"($env.XDG_CONFIG_HOME)/nushell"
+$nu.default-config-dir
+XDG_CONFIG_HOME
+asdasd
+cd 
+$nu.env-path
+$nu.config-path
+> $env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"<\n>
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+> $env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+$"($env.XDG_CONFIG_HOME)/nushell"
+> $nu.env-path<\n>
+$nu.env-path
+ni
+clear
+nu --help
+clear
+ls
+clear
+ls
+clear
+cat
+clear
+hx
+ls
+vlear
+asdfasdf
+clear
+ls
+clear
+ls
+asfs
+clear
+ls
+cal
+claer
+clear
+cledar
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+la
+clear
+ls
+clear
+which nu
+clear
+claer
+clear
+claer
+clear
+clera
+clear
+cloear
+clear
+z nu
+z Users
+clear
+$nu.env-path
+clear
+c
+cde
+cd
+cd `Library/Application Support/nushell/`
+$nu.config-path
+ls
+/Users/victorlisboa/Library/Application Support/nushell/config.nu
+hx /Users/victorlisboa/Library/Application Support/nushell/config.nu
+clear
+$env<\n>
+clear
+nu --help
+clear
+claer
+clear
+claer
+clear
+$env.PATH
+clear
+hx
+ls
+hx env.nu
+hx config.nu
+clear
+clare
+clear
+claer
+$env.PATH
+clear
+config env set XDG_CONFIG_HOME ".config"
+clear
+$env.XDG_CONFIG_HOME = "./config"
+claer
+clear
+z
+clear
+cd
+$env.XDG_CONFIG_HOME = "./config"
+clear
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+claer
+clear
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+clear
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+$env.XDG_CONFIG_HOME
+clear
+$env.SHELL
+claer
+clar
+$env.XDG_CONFIG_HOME = "$HOME/.config"
+claer
+$env.XDG_CONFIG_HOME = "$HOME/.config"
+clear
+$env.XDG_CONFIG_HOME = "/Users/victorlisboa/.config"
+clear
+clar
+cnearlc
+claer
+clear
+hx /etc/profile
+claer
+clear
+claer
+cleacldalcfadjsfkdsja
+claer
+clear
+nnn
+clear
+claer
+clear
+nnn
+claer
+z 
+clear
+brew
+claer
+clear
+cearl
+clear
+claer
+clear
+nvm use 18
+claer
+clear
+nvm use 16
+clear
+z
+claer
+clear
+hx
+hx /Users/victorlisboa/Library/Application Support/nushell/config.nu
+config nu --default
+hx /Users/victorlisboa/Library/Application Support/nushell/config.nu
+clear
+nu --help
+clear
+$nu.default-config-dir
+clear
+config reset
+clear
+ls
+clear
+ls
+clear
+ls
+nvm
+nvm use 16
+clear
+which nu
+chsh -s /opt/homebrew/bin/nu
+clear
+:q
+$nu.default-config-dir
+clear
+:q
+clear
+hx
+clear
+ls
+clear
+ls
+gitui
+lazygi
+lazygit
+rm -rf gitui/
+clear
+ls
+hx
+clear
+clear 
+clear
+hx
+clear
+nvm 
+clear
+ls
+clear
+yabai
+clear
+hx
+clear
+$nu.default-config-dir
+clear
+claer
+clear
+ls
+clear
+echo $shell
+clear
+echo $SHELL
+clear
+ls
+clear
+ls
+(char nl) + 'export XDG_CONFIG_HOME="$HOME/.config"' + (char nl) | save -a ~/.config/nushell/config.nu
+ls
+clear
+help export
+hx
+cd ~/.config/
+clear
+hx
+z conf
+z ~/.config
+cd ~/.config
+clear
+hx
+clear
+claer
+clear
+hx
+z ~/.config
+clear
+z ~/.config
+clear
+chsh -s /opt/homebrew/bin/nu
+clear
+:q
+clear
+:q
+clear
+ls
+cd web-scout/
+clear
+z ~/.config
+hx
+nu --help
+nvm
+hx
+clear
+clera
+clear
+nu version
+nu -v
+nu -version
+nu --version
+nu -v
+cearl
+^clear 
+claer
+cealr
+clear
+z ~/.config
+hx
+clear
+clear 
+clear
+test
+clear
+cltea
+tclaer
+clear
+nu
+fish
+clear
+$env.HELLO = "hello"
+$env.HELLO
+clear
+$env.config | table -e | less -R<\n>
+$env.config
+$env.HELLO
+clear
+$env.config.show_banner = true
+nu
+$env.config.test
+$env.config.show_banner
+$env.config.show_banner = true
+$env.config.show_banner
+$env.TEST
+$env.HELLO
+clear
+dclear
+clear
+cle3ar
+cladseaocdjfvalksdjfldasjlfjdalsfkjl
+learc
+clear
+z ~/.config
+clear
+cearl
+clear
+kub
+kubectl
+clear
+ls
+kubectl
+clear
+nu
+fis
+fish
+clea
+rclear
+clear
+fish
+cd ~/.config
+hx
+vi
+vi kitty/launch.conf
+claer
+cd ~/.config/kitty/
+vi kitty/launch.conf
+ls
+vi launch.conf
+clear
+^clear 
+clear
+^^clear 
+clear
+vi kitty/launch.conf
+cd ~/.config/kitty/
+vi launch.conf
+claer
+clear
+z ghossty
+cd ~/.config/kitty/
+hx
+hx kitty.conf
+cd ~/.config/kitty/
+vi launch.conf
+cd ~/.config/kitty/
+ls
+vi kitty/launch.conf
+vi kitty.conf
+cd ~/.config/kitty/
+claer
+clear
+z ghossty
+cd ~/.config/kitty/
+vi launch.conf
+cd ~/.config/kitty/
+hx
+cd ~/.config/kitty/
+hx kitty.conf
+yarn dev
+ghostty

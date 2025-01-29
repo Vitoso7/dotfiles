@@ -1,0 +1,4 @@
+[[snippets]]
+prefix = "gpalloc"
+body = "var gpa = std.heap.GeneralPurposeAllocator(.{}){};\ndefer _ = gpa.deinit();"
+description = "General Purpose Allocator"

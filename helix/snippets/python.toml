@@ -1,0 +1,4 @@
+[[snippets]]
+prefix = "ld"
+body = 'log.debug("$1")'
+description = "log at debug level"

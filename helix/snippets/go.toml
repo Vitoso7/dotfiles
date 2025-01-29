@@ -1,0 +1,4 @@
+[[snippets]]
+prefix = "ir"
+body = "if err != nil {\n\treturn ${1:nil}, ${2:err}\n}"
+description = "snippet for if err != nil"

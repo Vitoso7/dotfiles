@@ -1,0 +1,10 @@
+[[snippets]]
+prefix = "cl"
+body = 'console.log("$1")'
+description = "console.log"
+
+
+[[snippets]]
+prefix = "clt"
+body = 'console.log(`$1 ${$2}`)'
+description = "console.log with simple template string"

@@ -1,0 +1,15 @@
+[[snippets]]
+prefix = "cl"
+body = 'console.log("$1")'
+description = "console.log"
+
+[[snippets]]
+prefix = "clt"
+body = 'console.log(`$1 ${$2}`)'
+description = "console.log with simple template string"
+
+
+[[snippets]]
+prefix = "rfc"
+body = "import React from 'react'\n\nexport const ${TM_FILENAME_BASE} = (props : {}) => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}"
+description = "react typescript functional component"

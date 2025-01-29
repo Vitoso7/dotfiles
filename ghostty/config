@@ -1,0 +1,21 @@
+shell-integration = fish
+
+theme = oxocarbon
+keybind = ctrl+t=toggle_quick_terminal
+mouse-hide-while-typing = true
+window-decoration = true
+
+font-family = Hack Nerd Font Mono Regular
+font-family-bold = Hack Nerd Font Mono Bold
+font-family-italic = Hack Nerd Font Mono Italic
+font-family-bold-italic = Hack Nerd Font Mono Bold Italic
+font-size = 16
+
+background-opacity = 0.8
+background-blur-radius = 20
+
+quick-terminal-position = bottom
+
+
+command = /opt/homebrew/bin/nu -c '$env.XDG_CONFIG_HOME = $"($env.HOME)/.config"; /opt/homebrew/bin/nu'
+

@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!starship.toml
+!README.md
+!aerospace/
+!ghostty/
+!lazygit/
+!lazydocker/
+!helix/
+!tmux/
+!yabai/
+!kitty/
+!yazi/
+!fish/
+!nushell/

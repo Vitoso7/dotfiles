@@ -1,0 +1,24 @@
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[[manager.prepend_keymap]]
+on = ["l"]
+run = "plugin --sync hx-smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on = ["o"]
+run = "plugin --sync hx-smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on = ["<enter>"]
+run = "plugin --sync hx-smart-enter"
+desc = "Enter the child directory, or open the file"
+
+# [[manager.prepend_keymap]]
+# on = ["k"]
+# run = "plugin --sync arrow --args=-1"
+
+# [[manager.prepend_keymap]]
+# on = ["j"]
+# run = "plugin --sync arrow --args=1"
