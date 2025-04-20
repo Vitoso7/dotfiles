@@ -46,6 +46,16 @@ C-k = [
   "paste_before",
 ]
 P = ":clipboard-paste-before"
+# yazi config
+Cmd-f = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+# yazi config end
+
 # C-f = [
 # ":new",
 # ":insert-output lf-pick",

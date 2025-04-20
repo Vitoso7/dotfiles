@@ -1,1 +1,1 @@
--- require("no-status"):setup()
+require("no-status"):setup()

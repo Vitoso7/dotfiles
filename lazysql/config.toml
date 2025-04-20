@@ -1,0 +1,11 @@
+[[database]]
+Name = 'test'
+URL = 'postgres://postgres:password@localhost:5432/postgres?sslmode=disable'
+Provider = 'postgres'
+Username = ''
+Password = ''
+Hostname = ''
+Port = ''
+DBName = 'postgres'
+URLParams = ''
+Commands = []

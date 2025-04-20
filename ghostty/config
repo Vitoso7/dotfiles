@@ -15,7 +15,3 @@ background-opacity = 0.8
 background-blur-radius = 20
 
 quick-terminal-position = bottom
-
-
-command = /opt/homebrew/bin/nu -c '$env.XDG_CONFIG_HOME = $"($env.HOME)/.config"; /opt/homebrew/bin/nu'
-

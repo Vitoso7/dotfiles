@@ -1,10 +1,12 @@
+# DEPRECATED
+
 #!/usr/bin/env bash
 
 # set desired_width 25
 # desired_width=25
 
 # Open window on the left
-YAZI_CONFIG_HOME=~/.config/yazi/filetree_config /opt/homebrew/bin/yazi
+YAZI_CONFIG_HOME=~/.config/yazi/deprecated_hx_filetree_config /opt/homebrew/bin/yazi
 
 # Use jq to filter the JSON output based on the specific window ID
 # current_width=$(kitty @ ls | /opt/homebrew/bin/jq --arg window_id "$KITTY_WINDOW_ID" '.[].tabs[].windows[] | select(.id == ($window_id | tonumber)) | .columns')

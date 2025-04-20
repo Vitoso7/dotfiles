@@ -11,3 +11,5 @@ yarn/
 
 fish/fish_variables
 nushell/history.txt
+
+.DS_Store

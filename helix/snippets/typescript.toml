@@ -8,3 +8,18 @@ description = "console.log"
 prefix = "clt"
 body = 'console.log(`$1 ${$2}`)'
 description = "console.log with simple template string"
+
+[[snippets]]
+prefix = "nmap"
+body = 'const $1 = new Map<string, string>();'
+description = "new Hash"
+
+[[snippets]]
+prefix = "forl"
+body = "for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {\n\tconst ${3:element} = ${2:array}[${1:i}];\n$0}"
+description = "for loop"
+
+[[snippets]]
+prefix = "jsd"
+body = "/**\n *\n */"
+description = "JSDoc"

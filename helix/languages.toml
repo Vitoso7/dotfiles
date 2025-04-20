@@ -30,9 +30,39 @@ language-servers = ["scls"]
 # scls end #
 ############
 
-[[lnguage]]
+#########
+# astro #
+#########
+[[language]]
+name = "astro"
+auto-format = false
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+language-servers = ["astro-ls"]
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+# config = { typescript = { tsdk = "/Users/victorlisboa/.npm-global/lib/node_modules/typescript/lib" } }
+config = { typescript = { tsdk = "/Users/victorlisboa/.local/share/mise/installs/node/22.14.0/lib/node_modules/typescript/lib" } }
+#############
+# astro end #
+#############
+
+########
+# rust #
+########
+[[language]]
 name = "rust"
 auto-format = false
+language-servers = ["scls", "rust-analyzer"]
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+############
+# rust end #
+############
 
 [[language]]
 name = "zig"
@@ -43,6 +73,21 @@ language-servers = ["scls", "zls"]
 name = "go"
 auto-format = false
 language-servers = ["scls", "gopls"]
+
+#######
+# sql #
+#######
+[[language]]
+name = "sql"
+auto-format = false
+language-servers = ["scls", "sqls"]
+
+[language-server.sqls]
+command = "sqls"
+args = []
+###########
+# sql end #
+###########
 
 [[language]]
 name = "scheme"
@@ -133,6 +178,7 @@ codeActionOnSave = { mode = "all" }
 experimental = {}
 problems = { shortenToSingleLine = false }
 workingDirectory = { mode = "auto" }
+# roots = []
 
 # [language-server.eslint.config]
 # validate = "on"
@@ -235,6 +281,9 @@ language-id = "typescriptreact"
 command = "tailwindcss-language-server"
 args = ["--stdio"]
 config = {}
+################
+# Tailwind end #
+################
 
 [[language]]
 name = "markdown"
@@ -250,30 +299,30 @@ name = "bash"
 auto-format = true
 
 # Jabba on its way of being the most terrible digusting programming language ever be like: ☕️😎🤙
-# [[language]]
-# name = "java"
-# roots = ["pom.xml", "build.gradle"]
-# language-servers = ["java"]
-# auto-format = false
+[[language]]
+name = "java"
+roots = ["pom.xml", "build.gradle"]
+language-servers = ["jdtls", "scls"]
+auto-format = false
 
 # TODO Use $HOME to remove /Users/...
-# [language-server.java]
-# command = "java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ALL -Xmx1G --add-modules=ALL-SYSTEM --add-opens --add-opens java.base/java.util=ALL-UNNAMED -javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar -jar /opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar -configuration /opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac -data /Users/victorlisboa/.cache/jdtls_data"
-# timeout = 80
-# args = [
-#   "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-#   "-Dosgi.bundles.defaultStartLevel=4",
-#   "-Declipse.product=org.eclipse.jdt.ls.core.product",
-#   "-Dlog.level=ALL",
-#   "-Xmx1G",
-#   "--add-modules=ALL-SYSTEM",
-#   "--add-opens",
-#   "java.base/java.util=ALL-UNNAMED",
-#   "-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar",
-#   "-jar",
-#   "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar",
-#   "-configuration",
-#   "/opt/homebrew/Cellar/jdtls/1.26.0/libexec/config_mac",
-#   "-data",
-#   "/Users/victorlisboa/.cache/jdtls_data",
-# ]
+[language-server.jdtls]
+command = "jdtls"
+args = [
+  "--jvm-arg=-javaagent:/Users/victorlisboa/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar",
+]
+timeout = 100
+
+########
+# YAML #
+########
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml"]
+language-servers = ["yaml-language-server"]
+
+[language-server.yaml-language-server]
+config = { yaml = { schemas = { kubernetes = "/*.y{a,}ml" }, format = { enable = true } } }
+############
+# YAML end #
+############

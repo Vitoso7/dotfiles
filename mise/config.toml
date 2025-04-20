@@ -1,0 +1,7 @@
+[tools]
+java = "21"
+node = "22"
+python = "3.9"
+ruby = "3.2.3"
+usage = "latest"
+

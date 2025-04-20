@@ -6,32 +6,17 @@ if status is-interactive
     starship init fish | source
 end
 
-# alias lv="lvim"
-# alias v="nvim"
-alias fuckyou="git push -f"
-# alias b="brew"
-# alias zel="zellij"
-# alias nnn="nnn -de"
+alias ff="fastfetch"
+alias y="yazi"
 
 # Java is ass
-alias spring="mvn spring-boot:run"
-alias spring-local="mvn spring-boot:run -Plocal"
+alias spring-run="mvn spring-boot:run"
+alias spring-run-local="mvn spring-boot:run -Plocal"
 # Java is ass end
 
 # Kubernetes
 alias kub="kubectl"
 # Kubernetes end 
-
-# MacOS only
-if test (uname) = Darwin
-    function nvm
-        bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-    end
-
-    set -x NVM_DIR ~/.nvm
-    nvm use default --silent
-end
-
 
 set fish_greeting
 
@@ -40,6 +25,8 @@ set -Ux MAVEN_ALL_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-all/"
 set -Ux MAVEN_RELEASES_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-releases/"
 set -Ux MAVEN_SNAPSHOTS_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-snapshots/"
 # Nexus ojc end
+
+set -Ux ATAC_KEY_BINDINGS "~/.config/atac/vim_key_bindings.toml"
 
 # pnpm
 set -gx PATH "$PNPM_HOME" $PATH
@@ -68,8 +55,6 @@ if which swiftenv >/dev/null
     status --is-interactive; and source (swiftenv init -|psub)
 end
 
-zoxide init fish | source
-
 # yazi
 function yy
     set tmp (mktemp -t "yazi-cwd.XXXXX")
@@ -84,11 +69,24 @@ end
 # go
 set -U fish_user_paths ~/go/bin $fish_user_paths
 # go end
-#
 
 set -Ux fish_user_paths $fish_user_paths $PATH:$HOME/.config/zide/bin
 
-# source /opt/homebrew/opt/asdf/libexec/asdf.fish
+set -Ux fish_user_paths /opt/homebrew/bin $fish_user_paths
+
+# helix
+set -x HELIX_RUNTIME "~/personal-stuff/rust/helix/runtime"
+# set -x RUSTFLAGS "-C target-feature=-crt-static"
+# set -x HELIX_DISABLE_AUTO_GRAMMAR_BUILD 1
+# set -x CARGO_MANIFEST_DIR ~/githubs/helix/helix-term/
+# helix end
+
+# set --export JAVA_HOME (dirname (dirname (readlink -f (which java))))
+# set -gx PATH $JAVA_HOME $PATH
+
+set -x PATH $PATH $ANDROID_HOME/emulator
+set -x PATH $PATH $ANDROID_HOME/platform-tools
 
 # export XDG_CONFIG_HOME="$HOME/.config"
-#
+
+zoxide init fish | source
