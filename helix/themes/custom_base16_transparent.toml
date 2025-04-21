@@ -1,0 +1,9 @@
+inherits = "base16_transparent"
+
+"ui.cursor.primary.normal" = { bg = "magenta", fg = "cyan", modifiers = ["bold"] }
+"ui.cursor.primary.insert" = { bg = "green", fg = "black" }
+"ui.cursor.primary.select" = { bg = "white", fg = "black" }
+"ui.selection" = { bg = "magenta", fg = "cyan", modifiers = ["bold"] }
+"ui.linenr" = "white"
+"ui.linenr.selected" = { fg = "light-cyan", modifiers = ["bold"] }
+"ui.virtual.indent-guide" = "#3B3B3B"

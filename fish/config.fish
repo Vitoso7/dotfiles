@@ -116,7 +116,7 @@ function hx
     end
 
     # Add emoji and set title
-    kitty @ set-tab-title "🧬 $shortened"
+    kitty @ set-tab-title "HX ~> $shortened"
 
     # Run helix
     command hx $argv
