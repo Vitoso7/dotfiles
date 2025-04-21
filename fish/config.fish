@@ -90,9 +90,37 @@ set -x PATH $PATH $ANDROID_HOME/platform-tools
 zoxide init fish | source
 
 function hx
-    kitty @ set-tab-title "🧬 "/(basename $PWD)
+    # Replace home path with ~
+    set path (string replace -r "^$HOME" "~" $PWD)
+
+    # Split the path
+    set parts (string split "/" $path)
+    set shortened ""
+
+    # Loop through each part
+    for i in (seq (count $parts))
+        set part $parts[$i]
+
+        if test $i -eq 1
+            # First part (usually ~)
+            set shortened $part
+        else if test $i -eq (count $parts)
+            # Last part: full name
+            set shortened $shortened"/"$part
+        else
+            # Middle parts: first letter only
+            if test -n "$part"
+                set shortened $shortened"/"(string sub -l 1 $part)
+            end
+        end
+    end
+
+    # Add emoji and set title
+    kitty @ set-tab-title "🧬 $shortened"
+
+    # Run helix
     command hx $argv
 
-    # Reset to default title
+    # Reset tab title
     kitty @ set-tab-title ""
 end
