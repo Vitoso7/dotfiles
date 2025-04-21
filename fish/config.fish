@@ -24,7 +24,7 @@ set fish_greeting
 set -Ux MAVEN_ALL_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-all/"
 set -Ux MAVEN_RELEASES_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-releases/"
 set -Ux MAVEN_SNAPSHOTS_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-snapshots/"
-# Nexus ojc end
+# Nexus oc end
 
 set -Ux ATAC_KEY_BINDINGS "~/.config/atac/vim_key_bindings.toml"
 
@@ -40,15 +40,15 @@ set -gx PATH "$HOME/.config/kitty" $PATH
 set -Ux EDITOR hx
 
 # bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+set -x BUN_INSTALL "$HOME/.bun"
+set -x PATH $BUN_INSTALL/bin $PATH
 # bun end
 
-set --export RUBY "/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-set --export PATH $RUBY $PATH
+set -x RUBY "/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+set -x PATH $RUBY $PATH
 
-set --export ANDROID_HOME "/Users/$USER/Library/Android/sdk"
-set --export PATH "$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+set -x ANDROID_HOME "/Users/$USER/Library/Android/sdk"
+set -x PATH "$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 set -gx SWIFTENV_ROOT "$HOME/.swiftenv"
 set -gx PATH "$SWIFTENV_ROOT/bin" $PATH
 if which swiftenv >/dev/null
@@ -81,7 +81,7 @@ set -x HELIX_RUNTIME "~/personal-stuff/rust/helix/runtime"
 # set -x CARGO_MANIFEST_DIR ~/githubs/helix/helix-term/
 # helix end
 
-# set --export JAVA_HOME (dirname (dirname (readlink -f (which java))))
+# set --export JAVA_HOME (dirname (dirname (readlink -f (which ava))))
 # set -gx PATH $JAVA_HOME $PATH
 
 set -x PATH $PATH $ANDROID_HOME/emulator
