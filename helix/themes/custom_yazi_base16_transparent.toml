@@ -1,0 +1,67 @@
+inherits = "base16_transparent"
+
+# default
+# black
+# red
+# green
+# yellow
+# blue
+# magenta
+# cyan
+# gray
+# light-red
+# light-green
+# light-yellow
+# light-blue
+# light-magenta
+# light-cyan
+# light-gray
+# white
+
+"variable" = "light-red"
+"constant.numeric" = "yellow"
+"constant" = "yellow"
+"attribute" = "yellow"
+"type" = "yellow" # done
+"string"  = "green" # done
+# "string.special"  = "red" # done
+# "variable.other.member.private" = "red"
+"constant.character.escape" = "light-cyan"
+"function" = "light-blue"
+"constructor" = "light-blue"
+"special" = "light-blue"
+"keyword" = "light-magenta"
+"label" = "light-magenta"
+"namespace" = "light-magenta"
+"tag.builtin" = "yellow"
+
+"markup.heading" = "light-blue"
+"markup.list" = "light-red"
+"markup.bold" = { fg = "light-yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "light-magenta", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "yellow", underline = { color = "yellow", style = "line"} }
+"markup.link.text" = "light-red"
+"markup.quote" = "light-cyan"
+"markup.raw" = "green"
+"markup.normal" = { fg = "blue" }
+"markup.insert" = { fg = "green" }
+"markup.select" = { fg = "magenta" }
+
+"diff.plus" = "light-green"
+"diff.delta" = "light-blue"
+"diff.delta.moved" = "blue"
+"diff.minus" = "light-red"
+
+"ui.gutter" = "gray"
+"info" = "light-blue"
+"hint" = "light-gray"
+"debug" = "light-gray"
+"warning" = "light-yellow"
+"error" = "light-red"
+
+"diagnostic.info" = { underline = { color = "light-blue", style = "dotted" } }
+"diagnostic.hint" = { underline = { color = "light-gray", style = "double_line" } }
+"diagnostic.debug" = { underline ={ color ="light-gray", style = "dashed" } }
+"diagnostic.warning" = { underline = { color = "light-yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color ="light-red", style = "curl" } }

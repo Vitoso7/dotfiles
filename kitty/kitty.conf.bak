@@ -7,7 +7,7 @@ include ./theme.conf
 allow_remote_control yes
 enabled_layouts splits:split_axis=horizontal
 
-map cmd+f launch --location=before --cwd=oldest --title=hx-filetree hx_open_file_tree.bash
+# map cmd+f launch --location=before --cwd=oldest --title=hx-filetree hx_open_file_tree.bash
 
 map cmd+g launch --cwd=current --type=overlay lazygit
 map cmd+s launch --cwd=current --type=overlay lazysql
@@ -2178,7 +2178,7 @@ startup_session ./launch.conf
 
 
 # BEGIN_KITTY_THEME
-# Atelier Sulphurpool Dark
+# Base2Tone Sea Dark
 include current-theme.conf
 # END_KITTY_THEME
 

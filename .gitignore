@@ -10,6 +10,7 @@ yarn/
 .luarc.json
 
 fish/fish_variables
+fish/fish_variables.bak
 nushell/history.txt
 
 .DS_Store

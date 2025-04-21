@@ -87,6 +87,12 @@ set -x HELIX_RUNTIME "~/personal-stuff/rust/helix/runtime"
 set -x PATH $PATH $ANDROID_HOME/emulator
 set -x PATH $PATH $ANDROID_HOME/platform-tools
 
-# export XDG_CONFIG_HOME="$HOME/.config"
-
 zoxide init fish | source
+
+function hx
+    kitty @ set-tab-title "🧬 "/(basename $PWD)
+    command hx $argv
+
+    # Reset to default title
+    kitty @ set-tab-title ""
+end

@@ -1,0 +1,17 @@
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#121212", bg = "#b4b4b4", bold = true }
+normal_alt = { fg = "#b4b4b4", bg = "#212121" }
+
+# Select mode
+select_main = { fg = "#121212", bg = "#b4b4b4", bold = true }
+select_alt = { fg = "#b4b4b4", bg = "#212121" }
+
+# Unset mode
+unset_main = { fg = "#121212", bg = "#D87C4A", bold = true }
+unset_alt = { fg = "#D87C4A", bg = "#212121" }
+
+# : }}}
+
