@@ -15,3 +15,11 @@ unset_alt = { fg = "#D87C4A", bg = "#212121" }
 
 # : }}}
 
+
+[which]
+mask = { bg = "#000000" }
+cand = { fg = "green" }
+rest = { fg = "magenta" }
+desc = { fg = "#f4b8e4" }
+separator = "  "
+separator_style = { fg = "cyan" }

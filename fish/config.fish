@@ -1,6 +1,5 @@
 if status is-interactive
     fish_vi_key_bindings
-    # bind -M insert -m default jk backward-char force-repaint
 
     # Commands to run in interactive sessions can go here
     starship init fish | source
@@ -8,6 +7,11 @@ end
 
 alias ff="fastfetch"
 alias y="yazi"
+
+# ojc alias
+alias ojc-qa-cluster 'kubectl config use-context k8s-cluster-qa'
+alias ojc-az-cluster 'kubectl config use-context aks-corp-prd-eus2'
+# ojc alias end
 
 # Java is ass
 alias spring-run="mvn spring-boot:run"
@@ -20,11 +24,11 @@ alias kub="kubectl"
 
 set fish_greeting
 
-# Nexus ojc
+# ojc
 set -Ux MAVEN_ALL_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-all/"
 set -Ux MAVEN_RELEASES_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-releases/"
 set -Ux MAVEN_SNAPSHOTS_REPO_URL "https://nexus.gjccorp.com.br/repository/maven-snapshots/"
-# Nexus oc end
+# ojc end
 
 set -Ux ATAC_KEY_BINDINGS "~/.config/atac/vim_key_bindings.toml"
 
@@ -124,3 +128,24 @@ function hx
     # Reset tab title
     kitty @ set-tab-title ""
 end
+
+# Set default brew (native)
+# set -gx PATH /opt/homebrew/bin $PATH
+
+# Function to call x86_64 (Rosetta) brew
+# function brew-x86
+#     arch -x86_64 /usr/local/bin/brew $argv
+# end
+
+# FIXME
+# Start a Rosetta fish shell
+# function rosetta
+#     arch -x86_64 /opt/homebrew/bin/fish
+# end
+
+# Use Node x86 (Rosetta) version
+# function use-node@18-x86
+#     set -gx PATH /usr/local/opt/node@18/bin $PATH
+#     set -gx NODE_EXTRA_CA_CERTS ~/cacert.pem
+#     echo "🐢 Now using Node x86 from Homebrew Rosetta"
+# end
